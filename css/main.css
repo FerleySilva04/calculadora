@@ -1,0 +1,92 @@
+/* Restablecer estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Estilos básicos del cuerpo */
+body {
+    min-height: 100vh;
+    background-color: #f5f5f5; /* Fondo gris claro */
+    display: grid;
+    place-items: center;
+    padding: 10px;
+}
+
+/* Estilos de la calculadora */
+.calculadora {
+    background-color: #dfe7e9; /* Fondo de la calculadora en verde claro */
+    color: #333; /* Texto en gris oscuro */
+    width: 100%;
+    max-width: 400px;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .5rem;
+}
+
+/* Estilos de la pantalla */
+.pantalla {
+    grid-column: 1 / -1;
+    background-color: #cfd8dc; /* Fondo de pantalla en azul pastel */
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: right;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    font-family: monospace;
+    font-weight: 600;
+}
+
+/* Estilos de los botones */
+.btn {
+    background-color: #eceff1; /* Botones en gris claro */
+    color: #333; /* Texto en gris oscuro */
+    border: 0;
+    padding: 1.5rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+.btn:hover {
+    background-color: #cfd8dc; /* Fondo de botón al pasar el cursor */
+}
+
+/* Estilo especial para el botón 0 */
+#cero {
+    grid-column: span 2;
+}
+
+/* Estilo especial para el botón igual */
+#igual {
+    grid-row: span 2;
+    background-color: #81c784; /* Verde pastel para el botón igual */
+}
+
+#igual:hover {
+    background-color: #66bb6a; /* Verde pastel más oscuro al pasar el cursor */
+}
+
+/* Diseño responsivo para pantallas más pequeñas */
+@media (max-width: 400px) {
+    .calculadora {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .pantalla {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    .btn {
+        padding: 1rem .5rem;
+        font-size: 1rem;
+    }
+}
